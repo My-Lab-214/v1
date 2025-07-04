@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" style="scrollbar-width: none;"><head>
+  <meta charset="UTF-8">
+  <title>Editable Page with GitHub Deploy</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; background: #f0f0f0; }
+    nav, footer { background: #2d3436; color: white; padding: 1em; text-align: center; }
+    header { background: #00cec9; color: white; padding: 2em; text-align: center; }
+    section { max-width: 800px; margin: 2em auto; background: white; padding: 2em; box-shadow: 0 0 10px #ccc; }
+    #deployBtn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #0984e3;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    .selected { outline: 2px dashed red; }
+  </style>
+</head>
+<body>
+
+<button id="deployBtn">🚀 Deploy to GitHub</button>
+
+<nav contenteditable="true">
+  <h2>My Website</h2>
+</nav>
+
+<header contenteditable="true">
+  <h1>Welcome!</h1>
+  <p>Edit this site and deploy live with 1 click.</p>
+</header>
+
+<section contenteditable="true">
+  <h2>Editable Section</h2>
+  <p>This page is editable! You can change this text and deploy your site instantly using GitHub Pages.</p>
+</section>
+
+<footer contenteditable="true">
+  <p>© 2025 MySite | Built with ❤️</p>
+</footer>
+
+
+
+
+
+</body></html>
