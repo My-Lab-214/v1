@@ -1,10 +1,9 @@
-# .github/workflows/deploy.yml
 name: GitHub Pages
 
 on:
   push:
     branches:
-      - main  # change to 'master' if needed
+      - main  # or 'master' if that's your branch
 
 permissions:
   contents: read
@@ -14,7 +13,17 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
+      # ✅ Upload site content as 'github-pages' artifact
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'  # folder to publish (includes index.html)
+
+      # ✅ Configure GitHub Pages
       - uses: actions/configure-pages@v4
+
+      # ✅ Deploy to GitHub Pages
       - uses: actions/deploy-pages@v4
